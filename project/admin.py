@@ -1,5 +1,5 @@
 from django.contrib import admin
-from numpy import product
+#from numpy import product
 
 # Register your models here.
 
