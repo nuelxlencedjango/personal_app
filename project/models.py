@@ -17,7 +17,7 @@ from cloudinary.models import CloudinaryField
 
 class ProjectDetails(models.Model):
     projectName =models.CharField(max_length=200, blank=True, null=True)
-    description =models.CharField(max_length=200, blank=True, null=True)
+    description =models.TextField(max_length=200, blank=True, null=True)
     functionality1 =models.CharField(max_length=200, blank=True, null=True)
     functionality2 =models.CharField(max_length=200, blank=True, null=True)
     functionality3 =models.CharField(max_length=200, blank=True, null=True)
