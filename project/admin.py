@@ -18,4 +18,6 @@ class ContactUsAdmin(admin.ModelAdmin):
 
 
 
-admin.register.site(ProjectDetails)
+
+
+admin.site.register(ProjectDetails)
