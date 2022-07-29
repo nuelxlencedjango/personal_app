@@ -1,4 +1,5 @@
 
+from multiprocessing import context
 from pyexpat.errors import messages
 from unittest import result
 from django.shortcuts import render
@@ -26,3 +27,8 @@ class ProjectView(ListView):
         qs = super(ProjectView, self).get_queryset(*args, **kwargs)
         qs =qs.order_by("-date_added")
         return qs
+
+def home(request):
+    product =ProjectDetails.objects.all()
+    context={'product':product}
+    return render(request,'project/home.html',context)

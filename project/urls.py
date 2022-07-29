@@ -11,7 +11,8 @@ app_name = 'project'
 
 urlpatterns =[
 
-    path('',ProjectView.as_view(), name='home'),
+    #path('',ProjectView.as_view(), name='home'),
+    path('',views.home, name='home'),
     
 ]
 
