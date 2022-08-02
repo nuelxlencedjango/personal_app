@@ -44,30 +44,219 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
+<body>
 
-
-    <div class="prod">
-        <div class="container">
-            <h1>Deal Of The Day - Nigeria</h1>
+    <section>
+        <div class="prod">
+       
+            <h1>Some live projects</h1>
             <div class="row my-5">
-                {% for item in product %}
+              
+                <p class="tech">Technologies used:</p>
+                <h3>Html,Css,Bootstrap5,Js,Python3.9,Django </h3>
+                <p class="tech"> Database: <span>Postgres API</span></p>
+    
+                <div class="col-md-4 my-4">
+             <div class="card-body">
+                <a href="https://www.wilmotinnovation.com/">
+              
+                    <img  src="/static/images/img/estate.jpg" alt="" class="w-100">
+                    
+                        <h4 class="my-project">Project Name: wilmotinnovation.com </h4>
+
+                        
+                   <div class="text">
+                    <h4>Project Overview:</h4>
+                    <p>This is a real estate management project.Users can see all the available properties listed on the site.Users can select any property to see details. They can equally see the animated and graphical images of the property.
+                        <p>Users can search for properties by giving the price range of their estimate and the property features.</p> 
+                        <p>Users can add to cart and have all the prices calculated but MUST register with the app and give their emails and names.</p>  
+                        <p>Users can contact the admin without leaving the site. They can send mails from the site to the admin and can chat(chat icon ) them up on facebook directly from the site</p>
+                        <p>Users can change password but the system will send a mail to their emails for confirmaton first before it happens</p>
+                        <!--<p>Users can see team memebers,Services Offered and testimonies</p>-->
+                   </div>
+               </a>
+             </div>
+                </div>
+
+
+              
+                <div class="col-md-4 my-4">
+             <div class="card-body">
+                <a href="https://iwanwok.herokuapp.com/">
+              
+                    <img  src="/static/images/img/work2.jpg" alt="" class="w-100">
+                    
+                        <h4 class="my-project">Project Name: I-wan-wok.com </h4>
+
+                    
+                   <div class="text">
+                    <h4>Project Overview:</h4>
+                       <p>Job portal service.There are 3 users -THE Admin, clients and artisans.Both clients and artisans must login before they can meet each other.</p>
+                        <p>A client can post jobs on the site as well as look for artisans available on the site.He selects artisans wants but have must made payment before artisans relating to the job can see it.when an artisan accepts the job,the client gets notification on the dashboard. </p> 
+                        <p>The client can add job items to the cart and pay for all at a time.The client will be able to see all the his previous transactions as well get a receipt with paymentt id.</p>
+                        <p>Once payment s made and an artisan accepts, the client can have full information about the artisan.</p>
+   
+                        <p>Artisan:
+                            The artisan can see available jobs only in line with his profession.
+                            if the artisan accepts the job,he must register it for payment after he must have completed the job.He can access information about his previous jobs. </p>  
+                        <p>Users can contact the admin without leaving the site. They can send mails from the site to the admin  directly from the site</p>
+                </div>
+               </a>
+             </div>
+                </div>
+
+
 
                 <div class="col-md-4 my-4">
-               <a href="{{item.technology }}">
-              
-                    <img  src="{{ item.img.url }}" alt="" class="w-100">
-                    <h4 class="my-">{{ item.projectName }}</h4>
-                    <span class="old">#{{ item.old_price}}/pack</span>&nbsp;&nbsp;
-                    <span class="price">#{{item.new_price}}/pack </span>
-                     <a href="" class="opt">view options ></a>
-                    
-                    <p  class="describe">{{item.desc |truncatewords:9}}</p>
-                        
-               </a>
-                </div>
+                    <div class="card-body">
+                       <a href="https://financialbank.herokuapp.com/">
+                     
+                           <img  src="/static/images/img/loan1.jpg" alt="" class="w-100">
+                           
+                               <h4 class="my-project">Project Name: Loan App Project </h4>
+       
+                              
+                          <div class="text">
+                           <h4>Project Overview:</h4>
+                           <p>This is an app for loan management.A user must login before he/she can make a request.When he requests for a loan,the system requires him to fill every neccesary form.He then waits for approval or decline from the admin.</p> 
+                               <p>He can make payment after the loan is approved and can access his loan history and payments made.Deduction is made when payment is made. If fails to pay up within 30 days, 10% charges will be added to the remaining amount.He can not make another request until he pays up.</p> 
+                               <p>Admin can see all customers and can access each customer's infomation by clicking on each of them -name,image,the amount borrowed,date,date to pay up,profits and all payments made ,etc.</p>  
+                               <p>The admin can see all requests as well as payments with dates by all the customers</p>
+                               <p>He can see all approved and decliened requests separately.</p>
+                               <p>He can see all total amount loaned,expected returns,total amount paid as well as total outstanding.</p>
+                               <p>He can also get information about each loaction. The number of clients in each loaction,the amount loaned,expected return,profit from each location.If no clients are found there, the system states it.</p>
+                         </div>
+                      </a>
+                    </div>
+                       </div>
+
+                     <div class="col-md-4 my-4">
+                        <div class="card-body">
+                        <a href="https://apiconsumption.herokuapp.com">
+                       
+                             <img  src="/static/images/img/api2.jpg" alt="" class="w-100">
+                             <h4 class="my-project">Project Name: Django Rest API Consumption </h4>
+                             
+                                  <div class="text">
+                                <h4>Project Overview:</h4>
+                                <p>This project is about API consumption on stackoverflow.com.</p>
+      
+                                 <p>It brings 30 different questions at once asked on the platform by developers who face one problems in their jobs.</p> 
+                                 <p>Each refresh brings 30 new questions.</p>
+                                 <p>You can search for a particular subject among these questions and it will display questions related to the question.</p>
+                                 <p>It show the following:</p>
+                                 <ul>
+                                    <li>Owener of the post</li>
+                                    <li>Owener's profile pic</li>
+                                    <li>Owener's Id</li>
+                                    <li>Question title </li>
+                                    <li>Question Id</li>
+                                    <li>What the question is related to</li>
+                                    <li>Number of answers given</li>
+                                    <li>The number of people who have seen the question</li>
+                                    <li>Date posted </li>
+                                    <li>Last active date</li>
+                                    <li>Link to original question in stackoverflow</li>
+                                 </ul>
+
+                              
+                            </div>
+                        </a>
+                         </div>
+                     </div>
+                     <div class="col-md-4 my-4">
+                        <div class="card-body">
+                        <a href="https://apicrudoperations.herokuapp.com/">
+                       
+                             <img  src="/static/images/img/api1.jpg" alt="" class="w-100">
+                             <h4 class="my-project">Project Name: Django Rest API Crud Operations </h4>
+                             
+                                  <div class="text">
+                                <h4>Project Overview:</h4>
+                                <p>This project is about API crud operations.</p>
+                                <p>Copy and paste the urls in the qoutes to perform crud operations here</p>
+                                <p>Users can see all product using '/product_list/'</p>
+      
+                                 <p>Users can create product using '/product_create/'</p> 
+                                 <p>Users can update a product with '/product_detail/id/' </p>
+                                    <p>Users can see product details using '/product_detail/id'</p>
+                                    <p>To delete a particular product, use  '/product_delete/id/'</p>
+                                 
                 
-                {% endfor %}
-            
+                            </div>
+                        </a>
+                         </div>
+                     </div>
+                     <div class="col-md-4 my-4">
+                        <div class="card-body">
+                        <a href="https://www.realmindt.com/">
+                       
+                             <img  src="/static/images/img/realContact.jpg" alt="" class="w-100">
+                             <h4 class="my-project">Project Name: Realmindt.com</h4>
+                             
+                                  <div class="text">
+                                <h4>Project Overview:</h4>
+                                <p>This is a simple website that displays courses offered in the institute</p>
+                                <p>Users can view details of each course.</p>
+                                <p>Users can send mails directly from the website</p>
+                                <p>Can register and book appointments</p>
+      
+                              
+                            </div>
+                        </a>
+                         </div>
+                     </div>
+                     
+                        
+                           
+                       
+                
                 </div>
             </div>
-        </div>
+    </section>
+      
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+      
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+      
+      
+<script src=""></script>
+      
+<script src=""></script>        
+
+</body>
+</html>
+        

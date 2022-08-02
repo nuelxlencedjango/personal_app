@@ -32,3 +32,5 @@ def home(request):
     product =ProjectDetails.objects.all()
     context={'product':product}
     return render(request,'project/home.html',context)
+
+    
