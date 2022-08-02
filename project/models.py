@@ -43,3 +43,23 @@ class ProjectDetails(models.Model):
         return reverse('product:add-to-cart' ,kwargs={
             "pk":self.pk
         })    
+
+
+
+
+
+class ContactUs(models.Model):
+
+   name = models.CharField(max_length=100) 
+   email = models.EmailField(unique = False) 
+   phone = models.CharField(max_length=20) 
+   selected_properties =models.CharField(max_length=100) 
+
+   message = models.TextField(max_length=200)
+
+
+   class Meta:
+      verbose_name_plural = "ContactMe"
+
+   def __str__(self):
+      return self.name 

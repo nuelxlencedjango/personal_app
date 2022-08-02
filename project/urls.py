@@ -13,6 +13,7 @@ urlpatterns =[
 
     #path('',ProjectView.as_view(), name='home'),
     path('',views.home, name='home'),
+     path('contact/' ,views.contactMe,name='contact'),
     
 ]
 
