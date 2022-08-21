@@ -1,7 +1,7 @@
 
 from multiprocessing import context
 from pyexpat.errors import messages
-from unittest import result
+
 from django.shortcuts import render
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -14,6 +14,9 @@ from .models import *
 from django.shortcuts import render ,redirect ,get_object_or_404
 from django.views.generic import (
     ListView ,DetailView, CreateView, UpdateView ,DeleteView,TemplateView )
+
+from django.db.models import Q
+
 
 
 
@@ -52,7 +55,43 @@ class ProjectView(ListView):
 
 def home(request):
     product =ProjectDetails.objects.all()
-    context={'product':product}
+   
+
+    def getIp(request):
+
+        address = request.META.get('HTTP_X_FORWARDED_FOR')
+        print("ip address:",address)
+        if address:
+            ip =  address.split(',')[-1].strip()
+            print('2nd ip:',ip)
+
+        else:
+            ip = request.META.get('REMOTE_ADDR') 
+            print('3rd ip :')
+
+        return ip
+
+    ip = getIp(request) 
+    u = User(user=ip)
+    print('4th ip:', ip)
+    result = User.objects.filter(Q(user__icontains=ip))
+    if len(result) == 1:
+        print('user exists')
+
+    elif len(result) > 1:
+        print('user exists')   
+
+    else:
+        u.save()    
+        print('unique user')
+
+    count = User.objects.all().count() 
+    print("total number is :", count)   
+
+    context={'product':product,'count':count}
+
+
+
     return render(request,'project/home.html',context)
 
 
@@ -102,3 +141,7 @@ def contactMe(request):
 
     else:
         return render(request ,'contact.html') 
+
+
+        
+

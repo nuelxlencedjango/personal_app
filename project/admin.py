@@ -21,3 +21,4 @@ class ContactUsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ProjectDetails)
+admin.site.register(User)
