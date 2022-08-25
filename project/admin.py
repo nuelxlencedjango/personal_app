@@ -1,4 +1,6 @@
 from django.contrib import admin
+
+from project.views import contactMe
 #from numpy import product
 
 # Register your models here.
@@ -22,3 +24,4 @@ class ContactUsAdmin(admin.ModelAdmin):
 
 admin.site.register(ProjectDetails)
 admin.site.register(User)
+admin.site.register(ContactUs)

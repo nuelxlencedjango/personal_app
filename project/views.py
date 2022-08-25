@@ -112,10 +112,6 @@ def contactMe(request):
         products = request.POST.getlist('property')
 
 
-
-
-        # seend a mail
-        # the order in which  to  pass arugument in the parameters is important
         send_mail(
             message_name , # email subject
             #message_phone, #phone no
@@ -137,10 +133,10 @@ def contactMe(request):
         contacts.save()
 
 
-        return render(request ,'email.html',{'message_name' :message_name}) 
+        return render(request ,'project/email.html',{'message_name' :message_name}) 
 
-    else:
-        return render(request ,'contact.html') 
+    
+    return render(request ,'project/contact.html') 
 
 
         

@@ -182,15 +182,30 @@ section .col-md4 .describe{
 }
 .text h4{
   color: #7755A2 !important;
-  font-family: 900;
- 
-  
+  font-family: 900; 
+}
+.card-phone{
+ margin-top: 30px;
+  font-family: 300;
+  text-transform: capitalize;
+  font-size: 18px;
+  color: #7755A2;
+}
+.card-phone p{
+  font-size: 20px;
+  color: #212529;
+}
+.btn{
+  font-size: 20px;
+  text-align: center;
 }
 .navbar{
   margin: 20px;
   
 }
-
+.input-data{
+  height: 50px;
+}
 .container{
   margin-top: 40px;
 }
@@ -203,9 +218,109 @@ a{
 .row .my-5{
   display: block;
 }
+.card-message{
+  margin-bottom: 70px;
+}
 
+.caro{
+  display: none;
+}
+  .features{
+        display: none;
+    }
+    .about{
+        display: none;
+    }
+    .realmind{
+      display: none;
+  }
+  .banner{
+   display: none;
+ }
+  .email-received{
+      margin-bottom: 120px;
+      margin-top: 100px;
+      font-size: 18px;
+  }
 
+.footer{
+  /*background-color: #6F8BA4;*/
+  background-color: #223a66;
+  padding: 70px 0;
+}
+ul{
+  list-style: none;
+}
+.footer .row{
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .container{
+  width: 1170px;
+ 
+  margin: auto;
+}
+.footer-col{
+  width: 25%;
+  padding: 0 2px;
+}
+.footer-col h4{
+  font-size: 20px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  /*font-weight: 500;*/
+  position: relative;
+}
+.footer-col h4::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 100px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
 
+}
+.card-info h1{
+  font-size: 22px;
+  text-align: center;
+  color: #7755A2;
+}
+.footer-col ul li a{
+  font-size: 17px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #fff;
+  padding-left: 8px;
+
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #fff;
+}
 
 
 

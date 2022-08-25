@@ -1,0 +1,92 @@
+
+
+{% extends 'project/base.html' %}
+{% load static %}
+{% block title %}ContactUs{% endblock %}
+{% block content %}
+
+
+
+
+<style>
+
+</style>
+
+
+
+<div class="container contactMe" >
+    <div class="card-info ">
+        <h1>Contact Information</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+          
+           <div class="contact-info ">
+              <div class="contact-details team-body-side animate__animated animate__backInLeft">
+                
+                <div class="card-phone">
+                    <h2>phone:</h2>
+                    <p>+2348079385255 </p>
+                  
+                </div>
+                <div class="card-phone">
+                 <h2>email:</h2>
+                 <p>nuel4xelence@gmail.com</p>
+              
+               
+             </div>
+            
+            
+              </div>
+           </div>
+        </div>
+
+        <div class="col-md-6 message-us">
+            <div class="card-message">
+
+              
+
+                <form action="" method="post" class="team-body-side animate__animated animate__backInRight">
+                    {% csrf_token %}
+                    <div class="mb-4 mess" style="padding-top: 30px; color: rgb(254,45,45);">
+                        <h1> Send A Message,Please</h1>
+                                   
+                      </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Name</label>
+                        <input class="form-control input-data" type="text" name="message-name" id="exampleFormControlInput1"  placeholder="Name" aria-label="default input example">
+                    
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Phone number</label>
+                        <input class="form-control input-data" id="" type="number" name="message-phone" placeholder=" phone number">
+                      </div>
+
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control input-data" name="message-email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" your emai address">
+                                 
+                    </div>
+                    
+        
+
+                    <div class="mb-3 textarea">
+                        <label for="exampleFormControlTextarea1" class="form-label left">Message</label>
+                        <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="5"></textarea>
+                      </div>
+
+
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
