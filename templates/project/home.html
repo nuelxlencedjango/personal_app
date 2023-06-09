@@ -5,12 +5,791 @@
 {% block content %}
 
 
+<style>
+:root{
+	--background: #c3c0ba;
+	--white: #fff;
+	/*--one: #c3266f;*/
+    --one: #000000;
+	--two: #743578;
+	--black: #54585d;
+	--process: #a5a5a5;
+}
+*{margin:0px; padding:0px; box-sizing: border-box; font-family: system-ui;}
+body{background: var(--background);}
+.col-div-3{width: 25%; float: left;}
+.col-div-7{width: 75%; float: left;}
+.col-div-4{width: 35%; float: left;}
+.col-div-8{width: 65%; float: left;}
+.col-div-6{width: 50%; float: left; position: relative;}
+.clearfix{clear: both;}
+.resume-main{width: 900px; height: 1150px; 
+	background: linear-gradient(var(--one), var(--two));
+	margin: 50px auto;
+	box-shadow:5px 5px 5px 5px #54585d33;
+}
+.left-box{width: 35%; float: left; height: 1150px;}
+.right-box{width: 65%; float: left; background-color: var(--white); height: 1150px;
+	margin: 50px 0px; border-radius: 50px 0px 0px 50px; padding:30px 50px;
+	box-shadow: -7px 2px 15px 2px #54585d52;}
+.profile{width: 150px; height: 150px; border: 3px solid var(--white); 
+	padding: 7px; border-radius: 50%; margin: 20px auto;}
+.profile img{width: 100%; border-radius: 50%; height: 100%; object-fit: cover;}
+.content-box{ padding: 0px 20px 0px 15px;}
+.content-box h2{text-transform: uppercase;font-weight: 500;color: var(--white); 
+	letter-spacing: 1px; font-size: 20px; text-align: center;}
+
+.hr1{border: none; height: 3px; background: var(--white); margin-top: 3px;}
+.p1{font-size: 12px;color: var(--white);letter-spacing: 1px;padding-top:0px; text-transform: capitalize;}
+/*#progress {background: var(--process);border-radius: 13px;height: 8px;width: 100%;}
+#progress:after {
+    content: '';
+    display: block;
+    background: var(--white);
+    width: 50%;
+    height: 100%;
+    border-radius: 9px;
+}
+#progress1 {background: var(--process);border-radius: 13px;height: 8px;width: 100%;}
+#progress1:after {
+    content: '';
+    display: block;
+    background: var(--white);
+    width: 40%;
+    height: 100%;
+    border-radius: 9px;
+}
+.circle{color:var(--white); font-size: 14px!important; margin-top: 7px;}
+.circle1{color:var(--process); font-size: 14px!important; margin-top: 7px;}
+*/
+
+.content-box h3{font-size: 13px;text-transform: uppercase;letter-spacing: 1px;padding-top: 10px;
+    color: white;font-weight: 500;
+}
+.p2{font-size: 13px; margin-bottom: 5px; margin-top: 5px; color: var(--white);}
 
 
+
+.in{background:var(--white);color: var(--one);padding: 8px;border-radius: 20px; font-size: 14px!important;}
+.inp{color: var(--white); font-size: 11px;}
+.col3{text-align: center;}
+h1{font-size: 18px; text-transform: uppercase; color: var(--black); line-height: 50px; font-weight: 700;}
+h1 span{color: var(--one);}
+.p3{letter-spacing: 1px;color: #54585d; font-weight: 500;line-height: 2px;}
+.heading{text-transform: uppercase;font-weight: 500;color: var(--one); 
+	letter-spacing: 1px; font-size: 20px;}
+.hr2{border: none; height: 1px; background: var(--black); margin-top: 3px;}
+.p5{font-weight: 700;color: var(--black);}
+.span1{font-size: 12px;color: var(--black);}
+
+ 
+.contact-info {
+    margin-bottom: 10px;
+  }
+  
+  .email ,
+  .phone {
+    color: #000;
+    font-weight: 500;
+  } 
+  
+  .separator {
+    height: 10px;
+    display: inline-block;
+    border-left: 2px solid #000;
+    margin: 0px 10px;
+  }
+  
+  .position {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: underline;
+  }
+
+
+
+
+
+/*.personality img{
+    width: 100%;
+}
+
+html {
+  height: 100%;  
+}
+
+body {
+  min-height: 100%;  
+  background: #eee;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 14px;
+  line-height: 26px;
+  padding-bottom: 50px;
+}
+
+.container {
+  max-width: 70%;   
+  background: #fff;
+  margin: 0px auto 0px; 
+  box-shadow: 1px 1px 2px #DAD7D7;
+  border-radius: 3px;  
+  padding: 40px;
+  margin-top: 50px;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+  .full-name {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .first-name {
+    font-weight: 700;
+  }
+  
+  .last-name {
+    font-weight: 300;
+  }
+ 
+
+
+
+.details {
+  line-height: 20px;
+}
+  .section {
+    margin-bottom: 20px;  
+  }
+  
+  .section:last-of-type {
+    margin-bottom: 0px;  
+  }
+  
+  .section__title {
+    letter-spacing: 2px;
+    color: #54AFE4;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .section__list-item {
+    margin-bottom: 20px;
+  }
+  
+  .section__list-item:last-of-type {
+    margin-bottom: 0;
+  }
+  
+  .left ,
+  .right {
+    vertical-align: top;
+    display: inline-block;
+  }
+  
+  .left {
+    width: 60%;    
+  }
+  
+  .right {
+    text-align: right;
+    width: 39%;    
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+  
+  .skills {
+    
+  }
+    
+  .skills__item {
+    margin-bottom: 10px;  
+  }
+  
+  .skills__item .right {
+  }
+    input {
+      display: none;
+    }
+
+    label {
+      display: inline-block;  
+      width: 20px;
+      height: 20px;
+      background: #C3DEF3;
+      border-radius: 20px;
+      margin-right: 3px;
+    }
+    
+    input:checked + label {
+      background: #79A9CE;
+    }*/
+  
+</style>
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
 
+<div class="resume-main">
+	<div class="left-box">
+		<br><br>
+		<div class="profile">
+			<img src="/static/images/img/wed1.JPG">
+		</div>
+		<div class="content-box">
+		<h2>Profile Info</h2>
+		<hr class="hr1">
+      
+       <!---<p class="p1"><span>software engineer </span>|<span> Django</span> | <span>python developer</span> | <span>RESTFUL API|</span></p>-->
+      <p class="p1">A tech enthusiast and tutor. 
+        Passionate about using data-driven decisions for providing solutions. 
+        Skilled in Python,Django development, Data Visualization, Power BI, and Data Analysis.
+        Worked with python framework and libraries like Pandas, NumPy, Matplotlib, Django.</p>
+	
+		<!--<h3>Language:</h3>
+		<p class="p2">English</p>
+		<div id="progress"></div>
+		<p class="p2">Hindi</p>
+		<div id="progress1"></div>-->
 
-   
+		<br><br>
+		<h2>Skills</h2>
+		<hr class="hr1">
+		<br>
+        <div class="col-div-6"><p class="p2">python</p></div>
+        <div class="col-div-6"><p class="p2">django</p></div>
+        <div class="col-div-6"><p class="p2">Rest Api</p></div>
+        <div class="col-div-6"><p class="p2">AWS(EC2)</p></div>
+        <div class="col-div-6"><p class="p2">Javascript</p></div>
+        <div class="col-div-6"><p class="p2">HTML & css</p></div>
+		<div class="col-div-6"><p class="p2">Web scraping</p></div>
+        <div class="col-div-6"><p class="p2">DBMS - mysql, postgresql</p></div>
+        <div class="col-div-6"><p class="p2">Numpy</p></div>
+        <div class="col-div-6"><p class="p2">pandas</p></div>
+        <div class="col-div-6"><p class="p2">Excel</p></div>
+        <div class="col-div-6"><p class="p2">Github</p></div>
+        <div class="col-div-6"><p class="p2">Data Science</p></div>
+        <div class="col-div-6"><p class="p2">Machine Learning</p></div>
+        <div class="col-div-6"><p class="p2">Linear,logistic regression</p></div>
+        <div class="col-div-6"><p class="p2">Data engineering</p></div>
+        <div class="col-div-6"><p class="p2">Data Visualization</p></div>
+        <div class="col-div-6"><p class="p2">Data Analysis</p></div>
+		<!--<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">CSS</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">JQUERY</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+			<div class="clearfix"></div>
+		<div class="col-div-6"><p class="p2">JAVASCRIPT</p></div>
+		<div class="col-div-6">
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+			<i class="fa fa-circle circle1"></i>
+		</div>
+
+			<div class="clearfix"></div>
+			<br>
+			<h2>interests</h2>
+			<hr class="hr1">
+			<br>
+			<div class="col-div-3 col3">
+				<i class="fa fa-futbol-o in"></i>
+				<span class="inp">Sports</span>
+			</div>
+			<div class="col-div-3 col3">
+				<i class="fa fa-futbol-o in"></i>
+				<span class="inp">Drive</span>
+			</div>
+			<div class="col-div-3 col3">
+				<i class="fa fa-futbol-o in"></i>
+				<span class="inp">Sports</span>
+			</div>
+			<div class="col-div-3 col3">
+				<i class="fa fa-futbol-o in"></i>
+				<span class="inp">Sports</span>
+			</div>-->
+
+		</div>
+      
+	</div>
+
+	<div class="right-box">
+		<h1>
+			<span>EMMANUEL OKWUDILI CHUKWUOKOLO</span>
+		</h1>
+	
+        <p class="p3" style="color: #000;"><span>software engineer </span>| <span>python developer</span> |<span> Django</span>  | <span>RESTFUL API|</span></p>
+        <div class="contact-info">
+            <span class="email">Email: </span>
+            <span class="email-val">nuel4xelence@gmail.com</span>
+            <span class="separator"></span>
+            <span class="phone">Phone: </span>
+            <span class="phone-val">+2348079385255</span>
+          </div>
+
+		<br>	
+		<h2 class="heading">Work Experience</h2>
+		<hr class="hr2">
+		<br>
+		<div class="col-div-4">
+			<p class="p5">Nov 2021 - present</p>
+			<span class="span1">Realmind Technologies Limited, Lagos</span>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">software engineer/ tutor</p>
+            <span>Design, coding, and layout of software solutions\applications, API integration, Git, Heroku & Railway deployments.</span>
+			<!--<span class="span1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>-->
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<div class="col-div-4">
+			<p class="p5">Jan 2020 ‐ Sep 2020</p>
+			<span class="span1">OAA Study ‐ Lagos</span>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Software Engineer /Database Administrator</p>
+            <span>Api integration, coding, layout of software applications,Git, Heroku & heroku deployment.</span>
+			<!--<span class="span1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>-->
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<div class="col-div-4">
+			<p class="p5">Jan 2020 ‐ Sep 2020</p>
+			<span class="span1">Databytes Software Pvt Ltd ‐ Bangalore, Karnataka</span>
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Junior python software developer, data scientist</p>
+			
+            <span>Data Wrangling, Data Analysis , Data Visualization , pandas , NumPy ,Python, Git , GitHub , Data Science , Communication</span>
+		</div>
+		<div class="clearfix"></div>
+
+		<br>	
+		<h2 class="heading">My Education</h2>
+		<hr class="hr2">
+		<br>
+		<div class="col-div-4">
+			<p class="p5">Jun 2019</p>
+			<span class="span1">Bangalore University ‐ Bangalore, Karnataka, India</span>
+            <!--<p>Bachelor of Computer Applications (First Class Distinction)</p>--->
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Degree</p>
+			<span class="span1">Bachelor of Computer Applications (First Class Distinction)</span>
+		</div>
+		<div class="clearfix"></div>
+		<br>
+		<div class="col-div-4">
+			<p class="p5">Oct 2019</p>
+			<span class="span1">Databytes Software Pvt Ltd ‐ Bangalore, Karnataka, India </span>
+            <!--<p>Certificate Of Completion, Core Java & Web Development Using Java</p>-->
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Degree</p>
+            <p>Certificate Of Completion, Data Science</p>
+			<!--<span class="span1">Certificate Of Completion, Core Java & Web Development Using Java</span>-->
+		</div>
+		<div class="clearfix"></div>
+        <div class="col-div-4">
+			<p class="p5">Jun 2019</p>
+			<span class="span1">Anspro Technologies ‐ Bangalore, Karnataka, India</span>
+            <!--<p>Certificate Of Completion, Core Java & Web Development Using Java</p>-->
+		</div>
+		<div class="col-div-8">
+			<p class="p5">Degree</p>
+			<span class="span1">Certificate Of Completion, Web Development Using Python</span>
+		</div>
+        
+
+        <div class="clearfix"></div>
+    <div class="col-div-4">
+        <p class="p5">Dec 2018</p>
+        <span class="span1">Anspro Technologies ‐ Bangalore, Karnataka, India</span>
+        <!--<p>Certificate Of Completion, Core Java & Web Development Using Java</p>-->
+    </div>
+    <div class="col-div-8">
+        <p class="p5">Degree</p>
+        <span class="span1"> Certificate Of Completion, Core Java & Web Development Using Java</span>
+    </div>
+    <a class="btn btn-danger" aria-current="page" href="" style="float: right;">Download</a>
+	</div>
+    
+	<div class="clearfix"></div> 
+
+</div>
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+<!--<div class="container">
+  <div class="header">
+    <div class="full-name">
+      <span class="first-name">EMMANUEL OKWUDILI</span> 
+      <span class="last-name">CHUKWUOKOLO</span>
+    </div>
+    <div class="contact-info">
+      <span class="email">Email: </span>
+      <span class="email-val">nuel4xelence@gmail.com</span>
+      <span class="separator"></span>
+      <span class="phone">Phone: </span>
+      <span class="phone-val">+2348079385255</span>
+    </div>
+    
+    <div class="about">
+      <span class="position">Front-End Developer </span>
+      <span class="desc">
+        I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
+      </span>
+    </div>
+  </div>
+   <div class="details">
+    <div class="section">
+      <div class="section__title">Experience</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">KlowdBox</div>
+            <div class="addr">San Fr, CA</div>
+            <div class="duration">Jan 2011 - Feb 2015</div>
+          </div>
+          <div class="right">
+            <div class="name">Fr developer</div>
+            <div class="desc">did This and that</div>
+          </div>
+        </div>
+                <div class="section__list-item">
+          <div class="left">
+            <div class="name">Akount</div>
+            <div class="addr">San Monica, CA</div>
+            <div class="duration">Jan 2011 - Feb 2015</div>
+          </div>
+          <div class="right">
+            <div class="name">Fr developer</div>
+            <div class="desc">did This and that</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">Bangalore University ‐ Bangalore, Karnataka, India</div>
+            <div class="addr">Bachelor of Computer Applications (First Class Distinction)</div>
+            <div class="duration">Jun 2016 - Jun 2019</div>
+          </div>
+          <div class="right">
+            <div class="name">Fr developer</div>
+            <div class="desc">did This and that</div>
+          </div>
+        </div>
+        <div class="section__list-item">
+          <div class="left">
+            <div class="name">Anspro Technologies ‐ Bangalore, Karnataka, India</div>
+            <div class="addr">San Monica, CA</div>
+            <div class="duration">Jan 2011 - Feb 2015</div>
+          </div>
+          <div class="right">
+            <div class="name">Fr developer</div>
+            <div class="desc">did This and that</div>
+          </div>
+        </div>
+
+      </div>
+      
+  </div>
+     <div class="section">
+      <div class="section__title">Projects</div> 
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="name">DSP</div>
+           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+         </div>
+         
+         <div class="section__list-item">
+                    <div class="name">DSP</div>
+           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
+           </div>
+         </div>
+       </div>
+    </div>
+     <div class="section">
+       <div class="section__title">Skills</div>
+       <div class="skills">
+         <div class="skills__item">
+           <div class="left"><div class="name">
+             Javascript
+             </div></div>
+           <div class="right">
+                          <input  id="ck1" type="checkbox" checked/>
+
+             <label for="ck1"></label>
+                          <input id="ck2" type="checkbox" checked/>
+
+              <label for="ck2"></label>
+                         <input id="ck3" type="checkbox" />
+
+              <label for="ck3"></label>
+                           <input id="ck4" type="checkbox" />
+            <label for="ck4"></label>
+                          <input id="ck5" type="checkbox" />
+              <label for="ck5"></label>
+
+           </div>
+         </div>
+         
+       </div>
+       <div class="skills__item">
+           <div class="left"><div class="name">
+             CSS</div></div>
+           <div class="right">
+                          <input  id="ck1" type="checkbox" checked/>
+
+             <label for="ck1"></label>
+                          <input id="ck2" type="checkbox" checked/>
+
+              <label for="ck2"></label>
+                         <input id="ck3" type="checkbox" />
+
+              <label for="ck3"></label>
+                           <input id="ck4" type="checkbox" />
+            <label for="ck4"></label>
+                          <input id="ck5" type="checkbox" />
+              <label for="ck5"></label>
+
+           </div>
+         </div>
+         
+       </div>
+     <div class="section">
+     <div class="section__title">
+       Interests
+       </div>
+       <div class="section__list">
+         <div class="section__list-item">
+                  Football, programming.
+          </div>
+       </div>
+     </div>
+     </div>
+  </div>
+</div>-->
+
+   <!--<div class="personality">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="/static/images/img/person2.JPG" alt="">
+            </div>
+        
+        <div class="col-md-6">
+            <div class="header">
+                <div class="full-name">
+                  <span class="first-name">EMMANUEL OKWUDILI CHUKWUOKOLO</span> 
+                  <span class="last-name">CHUKWUOKOLO</span>
+                </div>
+                <div class="contact-info">
+                  <span class="email">Email: </span>
+                  <span class="email-val">nuel4xelence@gmail.com</span>
+                  <span class="separator"></span>
+                  <span class="phone">Phone: </span>
+                  <span class="phone-val">+2348079385255</span>
+                </div>
+                
+                <div class="about">
+                  <span class="position">software engineer </span>
+                  <span class="desc">
+                    I am a software developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
+                  </span>
+                </div>
+              </div>
+              <div class="details">
+                <div class="section">
+                  <div class="section__title">Experience</div>
+                  <div class="section__list">
+                    <div class="section__list-item">
+                      <div class="left">
+                        <div class="name">KlowdBox</div>
+                        <div class="addr">San Fr, CA</div>
+                        <div class="duration">Jan 2011 - Feb 2015</div>
+                      </div>
+                      <div class="right">
+                        <div class="name">Fr developer</div>
+                        <div class="desc">did This and that</div>
+                      </div>
+                    </div>
+                            <div class="section__list-item">
+                      <div class="left">
+                        <div class="name">Akount</div>
+                        <div class="addr">San Monica, CA</div>
+                        <div class="duration">Jan 2011 - Feb 2015</div>
+                      </div>
+                      <div class="right">
+                        <div class="name">Fr developer</div>
+                        <div class="desc">did This and that</div>
+                      </div>
+                    </div>
+            
+                  </div>
+                </div>
+                <div class="section">
+                  <div class="section__title">Education</div>
+                  <div class="section__list">
+                    <div class="section__list-item">
+                      <div class="left">
+                        <div class="name">Sample Institute of technology</div>
+                        <div class="addr">San Fr, CA</div>
+                        <div class="duration">Jan 2011 - Feb 2015</div>
+                      </div>
+                      <div class="right">
+                        <div class="name">Fr developer</div>
+                        <div class="desc">did This and that</div>
+                      </div>
+                    </div>
+                    <div class="section__list-item">
+                      <div class="left">
+                        <div class="name">Akount</div>
+                        <div class="addr">San Monica, CA</div>
+                        <div class="duration">Jan 2011 - Feb 2015</div>
+                      </div>
+                      <div class="right">
+                        <div class="name">Fr developer</div>
+                        <div class="desc">did This and that</div>
+                      </div>
+                    </div>
+            
+                  </div>
+                  
+              </div>
+                 <div class="section">
+                  <div class="section__title">Projects</div> 
+                   <div class="section__list">
+                     <div class="section__list-item">
+                       <div class="name">DSP</div>
+                       <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+                     </div>
+                     
+                     <div class="section__list-item">
+                                <div class="name">DSP</div>
+                       <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
+                       </div>
+                     </div>
+                   </div>
+                </div>
+                 <div class="section">
+                   <div class="section__title">Skills</div>
+                   <div class="skills">
+                     <div class="skills__item">
+                       <div class="left"><div class="name">
+                         Javascript
+                         </div></div>
+                       <div class="right">
+                                      <input  id="ck1" type="checkbox" checked/>
+            
+                         <label for="ck1"></label>
+                                      <input id="ck2" type="checkbox" checked/>
+            
+                          <label for="ck2"></label>
+                                     <input id="ck3" type="checkbox" />
+            
+                          <label for="ck3"></label>
+                                       <input id="ck4" type="checkbox" />
+                        <label for="ck4"></label>
+                                      <input id="ck5" type="checkbox" />
+                          <label for="ck5"></label>
+            
+                       </div>
+                     </div>
+                     
+                   </div>
+                   <div class="skills__item">
+                       <div class="left"><div class="name">
+                         CSS</div></div>
+                       <div class="right">
+                                      <input  id="ck1" type="checkbox" checked/>
+            
+                         <label for="ck1"></label>
+                                      <input id="ck2" type="checkbox" checked/>
+            
+                          <label for="ck2"></label>
+                                     <input id="ck3" type="checkbox" />
+            
+                          <label for="ck3"></label>
+                                       <input id="ck4" type="checkbox" />
+                        <label for="ck4"></label>
+                                      <input id="ck5" type="checkbox" />
+                          <label for="ck5"></label>
+            
+                       </div>
+                     </div>
+                     
+                   </div>
+                 <div class="section">
+                 <div class="section__title">
+                   Interests
+                   </div>
+                   <div class="section__list">
+                     <div class="section__list-item">
+                              Football, programming.
+                      </div>
+                   </div>
+                 </div>
+                 </div>
+        </div>
+    </div>
+   </div>
+   </div>-->
 
 
     <section>
@@ -20,7 +799,7 @@
             <div class="row my-5">
               
                 <p class="tech">Technologies used:</p>
-                <h3>Html,Css,Bootstrap5,Javascript,Python3.9,Django </h3>
+                <h3>Html,Css,Bootstrap5,Javascript,Python,Django </h3>
                 <p class="tech"> Database: <span>Postgres API</span></p>
 
            
@@ -89,7 +868,7 @@
                        <p>Job portal service.There are 3 users -THE Admin, clients and artisans.Both clients and artisans must login before they can meet each other.</p>
                         <p>A client can post jobs on the site as well as look for artisans available on the site.He selects artisans wants but have must made payment before artisans relating to the job can see it.when an artisan accepts the job,the client gets notification on the dashboard. </p> 
                         <p>The client can add job items to the cart and pay for all at a time.The client will be able to see all the his previous transactions as well get a receipt with paymentt id.</p>
-                        <p>Once payment s made and an artisan accepts, the client can have full information about the artisan.</p>
+                        <p>Once payment is made and an artisan accepts, the client can have full information about the artisan.</p>
    
                         <p>Artisan:
                             The artisan can see available jobs only in line with his profession.
