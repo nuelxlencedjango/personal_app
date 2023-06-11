@@ -28,12 +28,13 @@ import cloudinary.api
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x)=32pyt^*qme*9gg2i)s5y6t6(aivb*)^68xp20u0o7+8*%m8'
+
+SECRET_KEY=os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'web-production-8e2c.up.railway.app']
 
 
 # Application definition
@@ -142,11 +143,13 @@ MEDIA_URL ='/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR ,'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
 cloudinary.config( 
-  cloud_name = "dihjcmvi3", 
-  api_key = 719413493487441, 
-  api_secret = "OdUEmhlZnR8xNsGrvTwh7RkPVL4" 
+  cloud_name=os.environ.get('CLOUD_NAME'),
+  api_key=os.environ.get('API_KEY'), 
+  api_secret=os.environ.get('API_SECRET'), 
 )
+
 
 
 
@@ -164,6 +167,6 @@ EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 
 
 
-
+CSRF_TRUSTED_ORIGINS=['https://web-production-8e2c.up.railway.app']
 
 #django_heroku.settings(locals())
