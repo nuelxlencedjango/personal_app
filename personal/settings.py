@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+#
+#from dotenv import load_dotenv
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,7 +36,7 @@ SECRET_KEY=os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
-
+#DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'web-production-8e2c.up.railway.app']
 
 
@@ -46,11 +49,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
+     #'whitenoise.runserver_nostatic',
+
     'django_filters',
-    'project',
     'crispy_forms',
     'fontawesomefree',
+    'cloudinary',
+     'django_countries',
+     'widget_tweaks',
+     'mathfilters',
+    #app
+     'project',  
 ]
 
 MIDDLEWARE = [
@@ -61,6 +71,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'personal.urls'
@@ -95,6 +107,19 @@ DATABASES = {
 }
 
 
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DATABASE_NAME'),
+        'USER': os.getenv('DATABASE_USER'),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD'),
+        'HOST': os.getenv('DATABASE_HOST'),
+        'PORT': os.getenv('DATABASE_PORT'),
+    }
+}
+
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -165,6 +190,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
 
+#load_dotenv()
 
 
 CSRF_TRUSTED_ORIGINS=['https://web-production-8e2c.up.railway.app']

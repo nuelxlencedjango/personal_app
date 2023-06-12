@@ -38,7 +38,10 @@ from django.forms import inlineformset_factory
 
 from django.contrib.auth.mixins import LoginRequiredMixin ,UserPassesTestMixin
 
+from django.core.management.utils import get_random_secret_key
 
+# generating and printing the SECRET_KEY
+#print('begin:',get_random_secret_key(),':end')
 
 
 
