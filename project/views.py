@@ -1,44 +1,17 @@
-
-from multiprocessing import context
-from pyexpat.errors import messages
-
-from django.shortcuts import render
-from django.contrib import messages
 from django.core.mail import send_mail
 from django.conf import settings
-from django.contrib.auth.decorators import login_required
-from django_filters.views import FilterView
-from django.utils import timezone
-from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
+#from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
 from .models import *
-from django.shortcuts import render ,redirect ,get_object_or_404
-from django.views.generic import (
-    ListView ,DetailView, CreateView, UpdateView ,DeleteView,TemplateView )
+
+from django.views.generic import (ListView)
 
 from django.db.models import Q
-
-
-
-
-
-
-
-
-from django.shortcuts import render,redirect ,get_object_or_404, resolve_url
+from django.shortcuts import render,HttpResponse
 from django.contrib import auth, messages
-import json
-
-import requests
-from django.utils import timezone
-
-
+from .pdf import pdfFiles
 from django.http import HttpResponse,JsonResponse, request
-from django.forms import inlineformset_factory
+import datetime
 
-
-from django.contrib.auth.mixins import LoginRequiredMixin ,UserPassesTestMixin
-
-from django.core.management.utils import get_random_secret_key
 
 # generating and printing the SECRET_KEY
 #print('begin:',get_random_secret_key(),':end')
@@ -142,5 +115,29 @@ def contactMe(request):
     return render(request ,'project/contact.html') 
 
 
+
+def resumeDownload(request):
+    
+    convertPdf = pdfFiles('project/pdf.html')
+    return HttpResponse(convertPdf,content_type="application/pdf")
+
+
         
 
+
+
+from django.http import HttpResponse
+from django.views.generic import View
+
+from .utils import render_to_pdf #created in step 4
+
+class GeneratePdf(View):
+    def get(self, request, *args, **kwargs):
+        data = {
+             'today': datetime.date.today(), 
+             'amount': 39.99,
+            'customer_name': 'Cooper Mann',
+            'order_id': 1233434,
+        }
+        pdf = render_to_pdf('project/first.html', data)
+        return HttpResponse(pdf, content_type='application/pdf')

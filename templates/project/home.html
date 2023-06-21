@@ -5,6 +5,21 @@
 {% block content %}
 
 
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+
+    <!--owl carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+
 <style>
 :root{
 	--background: #c3c0ba;
@@ -21,15 +36,15 @@ body{background: var(--background);}
 .col-div-7{width: 75%; float: left;}
 .col-div-4{width: 35%; float: left;}
 .col-div-8{width: 65%; float: left;}
-.col-div-6{width: 50%; float: left; position: relative;}
+.col-div-6{width: 50%; float: left; position: relative;} 
 .clearfix{clear: both;}
-.resume-main{width: 900px; height: 1150px; 
+.resume-main{width: 900px; height: 1350px; 
 	background: linear-gradient(var(--one), var(--two));
 	margin: 50px auto;
 	box-shadow:5px 5px 5px 5px #54585d33;
 }
 .left-box{width: 35%; float: left; height: 1150px;}
-.right-box{width: 65%; float: left; background-color: var(--white); height: 1150px;
+.right-box{width: 65%; float: left; background-color: var(--white); height: 1350px;
 	margin: 50px 0px; border-radius: 50px 0px 0px 50px; padding:30px 50px;
 	box-shadow: -7px 2px 15px 2px #54585d52;}
 .profile{width: 150px; height: 150px; border: 3px solid var(--white); 
@@ -41,27 +56,7 @@ body{background: var(--background);}
 
 .hr1{border: none; height: 3px; background: var(--white); margin-top: 3px;}
 .p1{font-size: 12px;color: var(--white);letter-spacing: 1px;padding-top:0px; text-transform: capitalize;}
-/*#progress {background: var(--process);border-radius: 13px;height: 8px;width: 100%;}
-#progress:after {
-    content: '';
-    display: block;
-    background: var(--white);
-    width: 50%;
-    height: 100%;
-    border-radius: 9px;
-}
-#progress1 {background: var(--process);border-radius: 13px;height: 8px;width: 100%;}
-#progress1:after {
-    content: '';
-    display: block;
-    background: var(--white);
-    width: 40%;
-    height: 100%;
-    border-radius: 9px;
-}
-.circle{color:var(--white); font-size: 14px!important; margin-top: 7px;}
-.circle1{color:var(--process); font-size: 14px!important; margin-top: 7px;}
-*/
+
 
 .content-box h3{font-size: 13px;text-transform: uppercase;letter-spacing: 1px;padding-top: 10px;
     color: white;font-weight: 500;
@@ -100,20 +95,14 @@ h1 span{color: var(--one);}
     margin: 0px 10px;
   }
   
-  .position {
+  /*.position {
     font-weight: bold;
     display: inline-block;
     margin-right: 10px;
-    text-decoration: underline;
-  }
+    text-decoration: underline; 
+  }*/
 
 
-
-
-
-.personality img{
-    width: 100%;
-}
 
 html {
   height: 100%;  
@@ -143,49 +132,9 @@ body {
 .header {
   margin-bottom: 30px;
 }
-  .full-name {
-    font-size: 24px;
-    text-transform: uppercase;
-    margin-bottom: 5px;
-  }
   
-  .first-name {
-    font-weight: 700;
-  }
-  
-  .last-name {
-    font-weight: 300;
-  }
  
-
-
-
-.details {
-  line-height: 20px;
-}
-  .section {
-    margin-bottom: 20px;  
-  }
-  
-  .section:last-of-type {
-    margin-bottom: 0px;  
-  }
-  
-  .section__title {
-    letter-spacing: 2px;
-    color: #54AFE4;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-  }
-  
-  .section__list-item {
-    margin-bottom: 20px;
-  }
-  
-  .section__list-item:last-of-type {
-    margin-bottom: 0;
-  }
+ 
   
   .left ,
   .right {
@@ -202,8 +151,8 @@ body {
     width: 39%;    
   }
   
-  .name {
-    font-weight: bold;
+  section{
+    margin-top: 100px !important;
   }
   
   a {
@@ -217,9 +166,7 @@ body {
     color: #000;
   }
   
-  .skills {
-    
-  }
+
     
   .skills__item {
     margin-bottom: 10px;  
@@ -243,43 +190,51 @@ body {
     input:checked + label {
       background: #79A9CE;
     }
-  
+  .resume-main{
+    margin-bottom: 50px !important;
+  }
+  .item{
+    width: 300px;
+  }
+  .item a{
+    width: 100%;
+   margin: 10px;
+  }
+  .my-project{
+    color: green;
+    margin: 10px;
+    font-size: 16px;
+   font-family: sans-serif;
+    font-weight: 600;
+  }
+  .item a p{
+    color: #000;
+    font-size: 14px;
+    word-wrap: break-word;
+  }
+  .imgContact img{
+    border-radius: 20px;
+    width: 100%;
+  }
 </style>
 
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
 <body>
 
 <div class="resume-main">
 	<div class="left-box">
 		<br><br>
-		<div class="profile">
+		<div class="profile"> 
 			<img src="/static/images/img/wed1.JPG">
 		</div>
-		<div class="content-box">
-		<h2>Profile Info</h2>
+		<div class="content-box"> 
+		<h2>Profile</h2> 
 		<hr class="hr1">
-      
-       <!---<p class="p1"><span>software engineer </span>|<span> Django</span> | <span>python developer</span> | <span>RESTFUL API|</span></p>-->
-      <p class="p1">A tech enthusiast and tutor. 
-        Passionate about using data-driven decisions for providing solutions. 
-        Skilled in Python,Django development, Data Visualization, Power BI, and Data Analysis.
-        Worked with python framework and libraries like Pandas, NumPy, Matplotlib, Django.</p>
-	
-		<!--<h3>Language:</h3>
-		<p class="p2">English</p>
-		<div id="progress"></div>
-		<p class="p2">Hindi</p>
-		<div id="progress1"></div>-->
 
-
-
+      <p class="p1">
+        I am a skilled and motivated software engineer with a strong background in developing robust and scalable applications. Experienced in full-stack web development,with expertise in python and django technologies. I am committed to delivering high-quality code,
+        adhering to best practices, and continuously improving software development processes.I am passionate about solving complex problems and collaborating with cross-functional teams to deliver innovative solutions.
+     </p>
 
 		<br>
 		<h2>Skills</h2>
@@ -290,6 +245,7 @@ body {
         <div class="col-div-6"><p class="p2">Rest Api</p></div>
         <div class="col-div-6"><p class="p2">AWS(EC2)</p></div>
         <div class="col-div-6"><p class="p2">Javascript</p></div>
+        <div class="col-div-6"><p class="p2">Nginx</p></div>
         <div class="col-div-6"><p class="p2">HTML & css</p></div>
 		<div class="col-div-6"><p class="p2">Web scraping</p></div>
         <div class="col-div-6"><p class="p2">DBMS - mysql, postgresql</p></div>
@@ -303,62 +259,7 @@ body {
         <div class="col-div-6"><p class="p2">Data engineering</p></div>
         <div class="col-div-6"><p class="p2">Data Visualization</p></div>
         <div class="col-div-6"><p class="p2">Data Analysis</p></div>
-		<!--<div class="col-div-6">
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle1"></i>
-			<i class="fa fa-circle circle1"></i>
-		</div>
-			<div class="clearfix"></div>
-		<div class="col-div-6"><p class="p2">CSS</p></div>
-		<div class="col-div-6">
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle1"></i>
-		</div>
-			<div class="clearfix"></div>
-		<div class="col-div-6"><p class="p2">JQUERY</p></div>
-		<div class="col-div-6">
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle1"></i>
-			<i class="fa fa-circle circle1"></i>
-		</div>
-			<div class="clearfix"></div>
-		<div class="col-div-6"><p class="p2">JAVASCRIPT</p></div>
-		<div class="col-div-6">
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle"></i>
-			<i class="fa fa-circle circle1"></i>
-			<i class="fa fa-circle circle1"></i>
-			<i class="fa fa-circle circle1"></i>
-		</div>
-
-			<div class="clearfix"></div>
-			<br>
-			<h2>interests</h2>
-			<hr class="hr1">
-			<br>
-			<div class="col-div-3 col3">
-				<i class="fa fa-futbol-o in"></i>
-				<span class="inp">Sports</span>
-			</div>
-			<div class="col-div-3 col3">
-				<i class="fa fa-futbol-o in"></i>
-				<span class="inp">Drive</span>
-			</div>
-			<div class="col-div-3 col3">
-				<i class="fa fa-futbol-o in"></i>
-				<span class="inp">Sports</span>
-			</div>
-			<div class="col-div-3 col3">
-				<i class="fa fa-futbol-o in"></i>
-				<span class="inp">Sports</span>
-			</div>-->
+		
 
 		</div>
       
@@ -388,19 +289,21 @@ body {
 		</div>
 		<div class="col-div-8">
 			<p class="p5">software engineer/ tutor</p>
-            <span>Design, coding, and layout of software solutions\applications, API integration, Git, Heroku & Railway deployments.</span>
-			<!--<span class="span1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>-->
+
+      <span>Efficient  coding|Web scraping| layout of software solutions\applications|data analysis and scientific computing| API integration, Git, Heroku & Railway deployments.|collaboration with other team members|code debugging|
+        maintaining and updating existing code|</span>
 		</div>
 		<div class="clearfix"></div>
 		<br>
 		<div class="col-div-4">
-			<p class="p5">Jan 2020 ‐ Sep 2020</p>
+			<p class="p5">Oct 2020 ‐ Oct 2021</p>
 			<span class="span1">OAA Study ‐ Lagos</span>
 		</div>
 		<div class="col-div-8">
 			<p class="p5">Software Engineer /Database Administrator</p>
-            <span>Api integration, coding, layout of software applications,Git, Heroku & heroku deployment.</span>
-			<!--<span class="span1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>-->
+
+      <span>Efficient  coding,Web scraping, layout of software solutions\applications,data analysis and scientific computing, API integration |Git, Heroku,Godaddy & Railway deployments,collaboration with other team members|code debugging,
+        maintaining and updating existing codes</span>
 		</div>
 		<div class="clearfix"></div>
 		<br>
@@ -411,40 +314,40 @@ body {
 		<div class="col-div-8">
 			<p class="p5">Junior python software developer, data scientist</p>
 			
-            <span>Data Wrangling, Data Analysis , Data Visualization , pandas , NumPy ,Python, Git , GitHub , Data Science , Communication</span>
+      <span style="">Code writing,collaborating with the team to develop applications,identifying and resolving issues within the codebase,investigating error logs, and providing solutions for bugs</span>
 		</div>
 		<div class="clearfix"></div>
 
 		<br>	
-		<h2 class="heading">My Education</h2>
+		<h2 class="heading">Education</h2>
 		<hr class="hr2">
 		<br>
 		<div class="col-div-4">
 			<p class="p5">Jun 2019</p>
 			<span class="span1">Bangalore University ‐ Bangalore, Karnataka, India</span>
-            <!--<p>Bachelor of Computer Applications (First Class Distinction)</p>--->
+         
 		</div>
 		<div class="col-div-8">
 			<p class="p5">Degree</p>
-			<span class="span1">Bachelor of Computer Applications (First Class Distinction)</span>
+			<span class="span1">Bachelor of Computer Application (First Class Distinction)</span>
 		</div>
 		<div class="clearfix"></div>
 		<br>
 		<div class="col-div-4">
 			<p class="p5">Dec 2019</p>
 			<span class="span1">Databytes Software Pvt Ltd ‐ Bangalore, Karnataka, India </span>
-            <!--<p>Certificate Of Completion, Core Java & Web Development Using Java</p>-->
+
 		</div>
 		<div class="col-div-8">
 			<p class="p5">Degree</p>
             <p>Certificate Of Completion, Data Science</p>
-			<!--<span class="span1">Certificate Of Completion, Core Java & Web Development Using Java</span>-->
+
 		</div>
 		<div class="clearfix"></div>
         <div class="col-div-4">
 			<p class="p5">Jun 2019</p>
 			<span class="span1">Anspro Technologies ‐ Bangalore, Karnataka, India</span>
-            <!--<p>Certificate Of Completion, Core Java & Web Development Using Java</p>-->
+         
 		</div>
 		<div class="col-div-8">
 			<p class="p5">Degree</p>
@@ -456,527 +359,192 @@ body {
     <div class="col-div-4">
         <p class="p5">Oct 2018</p>
         <span class="span1">Anspro Technologies ‐ Bangalore, Karnataka, India</span>
-        <!--<p>Certificate Of Completion, Core Java & Web Development Using Java</p>-->
+       
     </div>
     <div class="col-div-8">
         <p class="p5">Degree</p>
         <span class="span1"> Certificate Of Completion, Core Java & Web Development Using Java</span>
     </div>
-    <a class="btn btn-danger" aria-current="page" href="" style="float: right;">Download</a>
+    <a class="btn btn-danger" aria-current="page" href="{% url 'project:pdf-download' %}" style="float: right;">Download</a>
 	</div>
-    
-	<div class="clearfix"></div> 
-
 </div>
 
 
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-
-<!--<div class="container">
-  <div class="header">
-    <div class="full-name">
-      <span class="first-name">EMMANUEL OKWUDILI</span> 
-      <span class="last-name">CHUKWUOKOLO</span>
-    </div>
-    <div class="contact-info">
-      <span class="email">Email: </span>
-      <span class="email-val">nuel4xelence@gmail.com</span>
-      <span class="separator"></span>
-      <span class="phone">Phone: </span>
-      <span class="phone-val">+2348079385255</span>
-    </div>
-    
-    <div class="about">
-      <span class="position">Front-End Developer </span>
-      <span class="desc">
-        I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
-      </span>
-    </div>
-  </div>
-   <div class="details">
-    <div class="section">
-      <div class="section__title">Experience</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">KlowdBox</div>
-            <div class="addr">San Fr, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-                <div class="section__list-item">
-          <div class="left">
-            <div class="name">Akount</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
+<!--carousel images--> 
+<section>
+  <h3>Some projects with source codes</h3>
+<div class="owl-carousel owl-theme">
+  <div class="item">
+    <a href="https://github.com/nuelxlencedjango/microfinance_app.git">
+      <div class="imgContact">
+        <img  src="/static/images/img/loan1.jpg" alt="" class="w-100">
+        <h4 class="my-project">Loan App Project </h4>
+        <p>A Loan app where users can obtain loans and pay with interest after a month. </p>
+        <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
 
       </div>
-    </div>
-    <div class="section">
-      <div class="section__title">Education</div>
-      <div class="section__list">
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Bangalore University ‐ Bangalore, Karnataka, India</div>
-            <div class="addr">Bachelor of Computer Applications (First Class Distinction)</div>
-            <div class="duration">Jun 2016 - Jun 2019</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
-        <div class="section__list-item">
-          <div class="left">
-            <div class="name">Anspro Technologies ‐ Bangalore, Karnataka, India</div>
-            <div class="addr">San Monica, CA</div>
-            <div class="duration">Jan 2011 - Feb 2015</div>
-          </div>
-          <div class="right">
-            <div class="name">Fr developer</div>
-            <div class="desc">did This and that</div>
-          </div>
-        </div>
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://github.com/nuelxlencedjango/complete_ecommerce_app.git">
+      <div class="imgContact">
+        <img  src="/static/images/img/shopping1.jpg" alt="" class="w-100">
+        <h4 class="my-project">Ecommerce App </h4>
+        <p>A complete and working e-commerce app .cartitem sysytem,payment gateway ,ect </p>
+        <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
 
       </div>
-      
+    </a>
   </div>
-     <div class="section">
-      <div class="section__title">Projects</div> 
-       <div class="section__list">
-         <div class="section__list-item">
-           <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
-         </div>
-         
-         <div class="section__list-item">
-                    <div class="name">DSP</div>
-           <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
-           </div>
-         </div>
-       </div>
-    </div>
-     <div class="section">
-       <div class="section__title">Skills</div>
-       <div class="skills">
-         <div class="skills__item">
-           <div class="left"><div class="name">
-             Javascript
-             </div></div>
-           <div class="right">
-                          <input  id="ck1" type="checkbox" checked/>
 
-             <label for="ck1"></label>
-                          <input id="ck2" type="checkbox" checked/>
-
-              <label for="ck2"></label>
-                         <input id="ck3" type="checkbox" />
-
-              <label for="ck3"></label>
-                           <input id="ck4" type="checkbox" />
-            <label for="ck4"></label>
-                          <input id="ck5" type="checkbox" />
-              <label for="ck5"></label>
-
-           </div>
-         </div>
-         
-       </div>
-       <div class="skills__item">
-           <div class="left"><div class="name">
-             CSS</div></div>
-           <div class="right">
-                          <input  id="ck1" type="checkbox" checked/>
-
-             <label for="ck1"></label>
-                          <input id="ck2" type="checkbox" checked/>
-
-              <label for="ck2"></label>
-                         <input id="ck3" type="checkbox" />
-
-              <label for="ck3"></label>
-                           <input id="ck4" type="checkbox" />
-            <label for="ck4"></label>
-                          <input id="ck5" type="checkbox" />
-              <label for="ck5"></label>
-
-           </div>
-         </div>
-         
-       </div>
-     <div class="section">
-     <div class="section__title">
-       Interests
-       </div>
-       <div class="section__list">
-         <div class="section__list-item">
-                  Football, programming.
-          </div>
-       </div>
-     </div>
-     </div>
+  <div class="item">
+    <a href="https://github.com/nuelxlencedjango/estate_management.git">
+      <div class="imgContact">
+          <img src="/static/images/img/estate.jpg" alt="">
+          <h4 class="my-project">Real Rstate App </h4>
+          <p>A real estate app where users can search for properties based on specification and locations </p>
+          <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
+  
+      </div>
+    </a>
   </div>
-</div>-->
+  <div class="item">
+    <a href="https://github.com/nuelxlencedjango/job_portal_in_django.git">
+      <div class="imgContact">
+          <img src="/static/images/img/work2.jpg" alt="">
+          <h4 class="my-project">Job Portal App </h4>
+          <p>A job portal where jobs are posted and job seekers bid for them. </p>
+          <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
+  
+      </div>
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://github.com/nuelxlencedjango/flight_reservation.git">
+      <div class="imgContact">
+          <img src="/static/images/img/flight1.jpg" alt="">
+          <h4 class="my-project">Flight Reservation App </h4>
+          <p>Users can book and cancel their flight,check flight fare and flight availability.</p>
+          <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
+  
+      </div>
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://github.com/nuelxlencedjango/stackoverflow_api_consumption.git">
+      <div class="imgContact">
+          <img src="/static/images/img/code2.jpg" alt="">
+          <h4 class="my-project">Web scraping - stackoverflow API Consumption  </h4>
+          <p>Some questions asked on the platform of stackoverflow are fetched and displayed here.
+          Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript</p>
+  
+      </div>
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://github.com/nuelxlencedjango/job_portal.git">
+      <div class="imgContact">
+          <img src="/static/images/img/job3.jpg" alt="">
+          <h4 class="my-project">Job Portal App </h4>
+          <p>A platform where artisans and employers meet for employment purposes </p>
+          <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
+  
+      </div>
+    </a>
+  </div>
+  <div class="item">
+    <a href="https://www.jesuschristglobalministries.com/">
+      <div class="imgContact">
+          <img src="/static/images/img/church1.jpg" alt="">
+          <h4 class="my-project">Church Service App </h4>
+          <p>Church worship center in which worshipers can come for church Services </p>
+          <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
+  
+      </div>
+    </a>
+  </div>
+  <div class="item">
+  <a href="https://github.com/nuelxlencedjango/students_overseas_admission.git">
+    <div class="imgContact">
+        <img src="/static/images/img/student.jpg" alt="">
+        <h4 class="my-project">Foreign University Admission </h4>
+        <p>University admission seekers can apply on the portal ,if they qualify,will get admitted into the university they chose. </p>
+        <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
 
-   <!--<div class="personality">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="/static/images/img/person2.JPG" alt="">
-            </div>
-        
-        <div class="col-md-6">
-            <div class="header">
-                <div class="full-name">
-                  <span class="first-name">EMMANUEL OKWUDILI CHUKWUOKOLO</span> 
-                  <span class="last-name">CHUKWUOKOLO</span>
-                </div>
-                <div class="contact-info">
-                  <span class="email">Email: </span>
-                  <span class="email-val">nuel4xelence@gmail.com</span>
-                  <span class="separator"></span>
-                  <span class="phone">Phone: </span>
-                  <span class="phone-val">+2348079385255</span>
-                </div>
-                
-                <div class="about">
-                  <span class="position">software engineer </span>
-                  <span class="desc">
-                    I am a software developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
-                  </span>
-                </div>
-              </div>
-              <div class="details">
-                <div class="section">
-                  <div class="section__title">Experience</div>
-                  <div class="section__list">
-                    <div class="section__list-item">
-                      <div class="left">
-                        <div class="name">KlowdBox</div>
-                        <div class="addr">San Fr, CA</div>
-                        <div class="duration">Jan 2011 - Feb 2015</div>
-                      </div>
-                      <div class="right">
-                        <div class="name">Fr developer</div>
-                        <div class="desc">did This and that</div>
-                      </div>
-                    </div>
-                            <div class="section__list-item">
-                      <div class="left">
-                        <div class="name">Akount</div>
-                        <div class="addr">San Monica, CA</div>
-                        <div class="duration">Jan 2011 - Feb 2015</div>
-                      </div>
-                      <div class="right">
-                        <div class="name">Fr developer</div>
-                        <div class="desc">did This and that</div>
-                      </div>
-                    </div>
-            
-                  </div>
-                </div>
-                <div class="section">
-                  <div class="section__title">Education</div>
-                  <div class="section__list">
-                    <div class="section__list-item">
-                      <div class="left">
-                        <div class="name">Sample Institute of technology</div>
-                        <div class="addr">San Fr, CA</div>
-                        <div class="duration">Jan 2011 - Feb 2015</div>
-                      </div>
-                      <div class="right">
-                        <div class="name">Fr developer</div>
-                        <div class="desc">did This and that</div>
-                      </div>
-                    </div>
-                    <div class="section__list-item">
-                      <div class="left">
-                        <div class="name">Akount</div>
-                        <div class="addr">San Monica, CA</div>
-                        <div class="duration">Jan 2011 - Feb 2015</div>
-                      </div>
-                      <div class="right">
-                        <div class="name">Fr developer</div>
-                        <div class="desc">did This and that</div>
-                      </div>
-                    </div>
-            
-                  </div>
-                  
-              </div>
-                 <div class="section">
-                  <div class="section__title">Projects</div> 
-                   <div class="section__list">
-                     <div class="section__list-item">
-                       <div class="name">DSP</div>
-                       <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
-                     </div>
-                     
-                     <div class="section__list-item">
-                                <div class="name">DSP</div>
-                       <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
-                       </div>
-                     </div>
-                   </div>
-                </div>
-                 <div class="section">
-                   <div class="section__title">Skills</div>
-                   <div class="skills">
-                     <div class="skills__item">
-                       <div class="left"><div class="name">
-                         Javascript
-                         </div></div>
-                       <div class="right">
-                                      <input  id="ck1" type="checkbox" checked/>
-            
-                         <label for="ck1"></label>
-                                      <input id="ck2" type="checkbox" checked/>
-            
-                          <label for="ck2"></label>
-                                     <input id="ck3" type="checkbox" />
-            
-                          <label for="ck3"></label>
-                                       <input id="ck4" type="checkbox" />
-                        <label for="ck4"></label>
-                                      <input id="ck5" type="checkbox" />
-                          <label for="ck5"></label>
-            
-                       </div>
-                     </div>
-                     
-                   </div>
-                   <div class="skills__item">
-                       <div class="left"><div class="name">
-                         CSS</div></div>
-                       <div class="right">
-                                      <input  id="ck1" type="checkbox" checked/>
-            
-                         <label for="ck1"></label>
-                                      <input id="ck2" type="checkbox" checked/>
-            
-                          <label for="ck2"></label>
-                                     <input id="ck3" type="checkbox" />
-            
-                          <label for="ck3"></label>
-                                       <input id="ck4" type="checkbox" />
-                        <label for="ck4"></label>
-                                      <input id="ck5" type="checkbox" />
-                          <label for="ck5"></label>
-            
-                       </div>
-                     </div>
-                     
-                   </div>
-                 <div class="section">
-                 <div class="section__title">
-                   Interests
-                   </div>
-                   <div class="section__list">
-                     <div class="section__list-item">
-                              Football, programming.
-                      </div>
-                   </div>
-                 </div>
-                 </div>
-        </div>
     </div>
-   </div>
-   </div>-->
+  </a>
+</div>
 
+<div class="item">
+  <a href="https://github.com/nuelxlencedjango/blogpost.git">
+    <div class="imgContact">
+        <img src="/static/images/img/blog_post.jpg" alt="">
+        <h4 class="my-project">Blog Post </h4>
+        <p>Newspaper publication outfit where each post is associated by the poster .All post made by a user can be filtered  </p>
+        <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
 
-    <section>
-        <div class="prod">
-       
-            <h1>Some live projects</h1>
-            <div class="row my-5">
+    </div>
+  </a>
+</div>
+<div class="item">
+  <a href="https://github.com/nuelxlencedjango/api_crud_operations.git">
+    <div class="imgContact">
+        <img src="/static/images/img/sql.jpg" alt="">
+        <h4 class="my-project">API CRUD Operations</h4>
+        <p>Api crud Operations </p>
+        <p>Using Python,Django,postgresql,Html,Css,Bootstrap,Javascript,</p>
+
+    </div>
+  </a>
+</div>
+
+</div>
+</div>
+
+</section> 
+<script>
+$(document).ready(function(){
+  if ($('.owl-carousel').length){
+  $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+
+     autoplayTimeout: 5000,
+      autoplay:true,
+
+  //autoPlayHoverPause:false,
+      //animateOut: 'slideOutDown',
+      //animateIn: 'flipInX',
+      responsiveClass:true,
+      responsive:{
+          0:{
+              items:1,
               
-                <p class="tech">Technologies used:</p>
-                <h3>Html,Css,Bootstrap5,Javascript,Python,Django </h3>
-                <p class="tech"> Database: <span>Postgres API</span></p>
-
-           
-
-
-                <div class="col-md-4 my-4">
-                    <div class="card-body">
-                       <a href="https://financialbank.herokuapp.com/">
-                     
-                           <img  src="/static/images/img/loan1.jpg" alt="" class="w-100">
-                           
-                               <h4 class="my-project">Project Name: Loan App Project </h4>
-       
-                            
-                          <div class="text">
-                           <h4>Project Overview:</h4>
-                           <p>This is an app for loan management.A user must login before he/she can make a request.When he requests for a loan,the system requires him to fill every neccesary form.He then waits for approval or decline from the admin.</p> 
-                               <p>He can make payment after the loan is approved and can access his loan history and payments made.Deduction is made when payment is made. If fails to pay up within 30 days, 10% charges will be added to the remaining amount.He can not make another request until he pays up.</p> 
-                               <p>Admin can see all customers and can access each customer's infomation by clicking on each of them -name,image,the amount borrowed,date,date to pay up,profits and all payments made ,etc.</p>  
-                               <p>The admin can see all requests as well as payments with dates by all the customers</p>
-                               <p>He can see all approved and decliened requests separately.</p>
-                               <p>He can see all total amount loaned,expected returns,total amount paid as well as total outstanding.</p>
-                               <p>He can also get information about each loaction. The number of clients in each loaction,the amount loaned,expected return,profit from each location.If no clients are found there, the system states it.</p>
-                         </div>
-                      </a>
-                    </div>
-                       </div>
-
-   
-    
-                <div class="col-md-4 my-4">
-             <div class="card-body">
-                <a href="https://www.wilmotinnovation.com/">
-              
-                    <img  src="/static/images/img/estate.jpg" alt="" class="w-100">
-                    
-                        <h4 class="my-project">Project Name: wilmotinnovation.com </h4>
-
-                        
-                   <div class="text">
-                    <h4>Project Overview:</h4>
-                    <p>This is a real estate management project.Users can see all the available properties listed on the site.Users can select any property to see details. They can equally see the animated and graphical images of the property.
-                        <p>Users can search for properties by giving the price range of their estimate and the property features.</p> 
-                        <p>Users can add to cart and have all the prices calculated but MUST register with the app and give their emails and names.</p>  
-                        <p>Users can contact the admin without leaving the site. They can send mails from the site to the admin and can chat(chat icon ) them up on facebook directly from the site</p>
-                        <p>Users can change password but the system will send a mail to their emails for confirmaton first before it happens</p>
-                        <!--<p>Users can see team memebers,Services Offered and testimonies</p>-->
-                   </div>
-               </a>
-             </div>
-                </div>
-
-
-              
-                <div class="col-md-4 my-4">
-             <div class="card-body">
-                <a href="https://www.i-wan-wok.com/">
-              
-                    <img  src="/static/images/img/work2.jpg" alt="" class="w-100">
-                    
-                        <h4 class="my-project">Project Name: I-wan-wok.com </h4>
-
-                    
-                   <div class="text">
-                    <h4>Project Overview:</h4>
-                       <p>Job portal service.There are 3 users -THE Admin, clients and artisans.Both clients and artisans must login before they can meet each other.</p>
-                        <p>A client can post jobs on the site as well as look for artisans available on the site.He selects artisans wants but have must made payment before artisans relating to the job can see it.when an artisan accepts the job,the client gets notification on the dashboard. </p> 
-                        <p>The client can add job items to the cart and pay for all at a time.The client will be able to see all the his previous transactions as well get a receipt with paymentt id.</p>
-                        <p>Once payment is made and an artisan accepts, the client can have full information about the artisan.</p>
-   
-                        <p>Artisan:
-                            The artisan can see available jobs only in line with his profession.
-                            if the artisan accepts the job,he must register it for payment after he must have completed the job.He can access information about his previous jobs. </p>  
-                        <p>Users can contact the admin without leaving the site. They can send mails from the site to the admin  directly from the site</p>
-                </div>
-               </a>
-             </div>
-                </div>
-
-
-
-
-                     <div class="col-md-4 my-4">
-                        <div class="card-body">
-                        <a href="https://apiconsumption.herokuapp.com">
-                       
-                             <img  src="/static/images/img/api2.jpg" alt="" class="w-100">
-                             <h4 class="my-project">Project Name: Django Rest API Consumption </h4>
-                             
-                                  <div class="text">
-                                <h4>Project Overview:</h4>
-                                <p>This project is about API consumption on stackoverflow.com.</p>
+          },
+         
+          600:{
+              items:2,
+             
+          },
       
-                                 <p>It brings 30 different questions at once asked on the platform by developers who face one problems in their jobs.</p> 
-                                 <p>Each refresh brings 30 new questions.</p>
-                                 <p>You can search for a particular subject among these questions and it will display questions related to the question.</p>
-                                 <p>It show the following:</p>
-                                 <ul>
-                                    <li>Owener of the post</li>
-                                    <li>Owener's profile pic</li>
-                                    <li>Owener's Id</li>
-                                    <li>Question title </li>
-                                    <li>Question Id</li>
-                                    <li>What the question is related to</li>
-                                    <li>Number of answers given</li>
-                                    <li>The number of people who have seen the question</li>
-                                    <li>Date posted </li>
-                                    <li>Last active date</li>
-                                    <li>Link to original question in stackoverflow</li>
-                                 </ul>
+          900:{
+              items:3,
 
-                              
-                            </div>
-                        </a>
-                         </div>
-                     </div>
-                     <div class="col-md-4 my-4">
-                        <div class="card-body">
-                        <a href="https://apicrudoperations.herokuapp.com/">
-                       
-                             <img  src="/static/images/img/api1.jpg" alt="" class="w-100">
-                             <h4 class="my-project">Project Name: Django Rest API Crud Operations </h4>
-                             
-                                  <div class="text">
-                                <h4>Project Overview:</h4>
-                                <p>This project is about API crud operations.</p>
-                                <p>Copy and paste the urls in the qoutes to perform crud operations here</p>
-                                <p>Users can see all product using '/product_list/'</p>
-      
-                                 <p>Users can create product using '/product_create/'</p> 
-                                 <p>Users can update a product with '/product_detail/id/' </p>
-                                    <p>Users can see product details using '/product_detail/id'</p>
-                                    <p>To delete a particular product, use  '/product_delete/id/'</p>
-                                 
-                
-                            </div>
-                        </a>
-                         </div>
-                     </div>
-                     <!--<div class="col-md-4 my-4">
-                        <div class="card-body">
-                        <a href="https://www.realmindt.com/">
-                       
-                             <img  src="/static/images/img/realContact.jpg" alt="" class="w-100">
-                             <h4 class="my-project">Project Name: Realmindt.com</h4>
-                             
-                                  <div class="text">
-                                <h4>Project Overview:</h4>
-                                <p>This is a simple website that displays courses offered in the institute</p>
-                                <p>Users can view details of each course.</p>
-                                <p>Users can send mails directly from the website</p>
-                                <p>Can register and book appointments</p>
-      
-                              
-                            </div>
-                        </a>
-                         </div>
-                     </div>-->
-                     
-                        
-                           
-                       
-                
-                </div>
-            </div>
-    </section>
-      {% endblock %}
+          },
+         
+          1000:{
+              items:3,
+             
+              loop:true,
+          }
+      }
+  })
+}
+})
 
-
-
-
-
-
-        
+</script>        
 
 
 
@@ -997,21 +565,14 @@ body {
 
 
 
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
   
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>  
+  
       
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-      
-      
-<script src=""></script>
-      
-<script src=""></script>        
-
-</body>
-</html>
-        
+{% include 'project/footer.html' %}
+{% endblock %}       

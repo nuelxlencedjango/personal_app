@@ -56,12 +56,12 @@
             <a class="nav-link active" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'project:contact' %}">Contact Me</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'project:contact' %}">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="">download resume</a>
+            <a class=" btn btn-outline-success" aria-current="page" href="{% url 'project:pdf-download' %}">Download Resume</a>
           </li>
-         
+        
         </ul>
         <form class="d-flex" method="GET" action="">
           <input class="form-control me-2" name="search" type="search" placeholder="Search" aria-label="Search">
@@ -75,4 +75,3 @@
 {% endblock %}
 
 
-{% include 'project/footer.html' %}
