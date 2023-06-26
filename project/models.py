@@ -69,6 +69,8 @@ class ContactUs(models.Model):
 
 class User(models.Model):
     user =models.TextField(default=None)
+    date_visited = models.DateTimeField(blank=True, null=True)
+    visitDate =models.DateField(blank=True, null=True)
 
     def __str__(self):
         return self.user
