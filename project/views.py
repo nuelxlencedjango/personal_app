@@ -1,16 +1,23 @@
 from django.core.mail import send_mail
 from django.conf import settings
-#from django.core.paginator import Paginator,EmptyPage, PageNotAnInteger
-from .models import *
+
+from django.core.paginator import Paginator 
 
 from django.views.generic import (ListView)
-
 from django.db.models import Q
 from django.shortcuts import render,HttpResponse
-from django.contrib import auth, messages
+#from django.contrib import auth, messages
 from .pdf import pdfFiles
-from django.http import HttpResponse,JsonResponse, request
+from django.http import HttpResponse
 import datetime
+
+
+from datetime import datetime
+from .models import *
+
+
+
+
 
 
 # generating and printing the SECRET_KEY
@@ -22,12 +29,11 @@ class ProjectView(ListView):
     model = ProjectDetails
     template_name = "project/home.html"
 
-
-
     def get_queryset(self, *args, **kwargs):
         qs = super(ProjectView, self).get_queryset(*args, **kwargs)
         qs =qs.order_by("-date_added")
         return qs
+
 
 def home(request):
     product =ProjectDetails.objects.all()
@@ -141,3 +147,9 @@ class GeneratePdf(View):
         }
         pdf = render_to_pdf('project/first.html', data)
         return HttpResponse(pdf, content_type='application/pdf')
+    
+
+
+
+
+

@@ -18,7 +18,7 @@ urlpatterns =[
      path('contact/' ,views.contactMe,name='contact'),
 
      path('pdf-download/' ,views.resumeDownload,name='pdf-download'),  
-     #path('new-download/',, name='new-download')
+     #path('traffic/', views.traffic_monitor, name='traffic'),
 
      path('myview/',  GeneratePdf.as_view(), name='myview'),
     
